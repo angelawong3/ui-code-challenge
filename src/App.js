@@ -1,24 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect } from "react";
+import Wrapper from "./components/Wrapper";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import "./App.css";
+
+import Home from "./components/Home";
+import Navigation from "./components/Navigation";
 
 function App() {
+  useEffect(() => {
+    document.title = "The God Father Employee Dashboard";
+  }, []);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Navigation />
+      <Wrapper>
+        <Routes>
+          <Route path="/" element={<Home />} />
+        </Routes>
+      </Wrapper>
+    </Router>
   );
 }
 
