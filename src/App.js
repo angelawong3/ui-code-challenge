@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./App.css";
 
 import Home from "./components/Home";
-import Navigation from "./components/Navigation";
+// import Navigation from "./components/Navigation";
 
 function App() {
   useEffect(() => {
@@ -12,7 +12,7 @@ function App() {
   }, []);
   return (
     <Router>
-      <Navigation />
+      {/* <Navigation /> */}
       <Wrapper>
         <Routes>
           <Route path="/" element={<Home />} />
