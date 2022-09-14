@@ -3,6 +3,10 @@ p {
   color: #fff;
 }
 
+.logo-img {
+  width: 100%;
+}
+
 .bg-img {
   background-size: cover;
   background-position: center;
